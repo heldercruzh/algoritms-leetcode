@@ -1,8 +1,4 @@
-<h1 align="center"> Top algorithms list for international interviews </h1>
-
-<p align="center">
-<img src="[http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge](https://www.google.com/imgres?imgurl=https%3A%2F%2Fleetcode.com%2Fstatic%2Fimages%2FLeetCode_Sharing.png&imgrefurl=https%3A%2F%2Fleetcode.com%2F&tbnid=cQ8rt18AHdsZYM&vet=12ahUKEwiygvrJsa39AhWyMrkGHaRPBkEQMygBegUIARC1AQ..i&docid=FvKQ9IiC6zPktM&w=500&h=260&itg=1&q=leetcode&ved=2ahUKEwiygvrJsa39AhWyMrkGHaRPBkEQMygBegUIARC1AQ)"/>
-</p>
+<h1 align="center"> Top algorithms for international interviews </h1>
 
 
 # It's very good to study algorithm to produce applications with better performance and less resource usage.
