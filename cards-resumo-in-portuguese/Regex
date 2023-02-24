@@ -1,0 +1,58 @@
+Expressão Regular em Java
+------------------------------------
+https://www.w3schools.com/java/java_regex.asp
+
+Serve para pesquisar dados em um texto
+pesquisa de texto e operações de substituição de texto
+
+O Java não possui uma classe de expressão regular incorporada, mas podemos importar o java.util.regex pacote para trabalhar com expressões regulares. O pacote inclui as seguintes aulas:
+
+PatternClasse - Define um padrão (para ser usado em uma pesquisa)
+MatcherClasse - Usado para procurar o padrão
+PatternSyntaxExceptionClasse - Indica erro de sintaxe em um padrão de expressão regular
+
+Exemplo:
+
+public static void main(String[] args) {
+    Pattern pattern = Pattern.compile("w3schools", Pattern.CASE_INSENSITIVE); //indica qual padrão está sendo pesquisado
+    Matcher matcher = pattern.matcher("Visit W3Schools!"); //procurar retorna um objeto Matcher que contém informações sobre a pesquisa realizada.
+    boolean matchFound = matcher.find(); //retorna true se o padrão foi encontrado
+    if(matchFound) {
+      System.out.println("Match found");
+    } else {
+      System.out.println("Match not found");
+    }
+}
+
+Os sinalizadores no compile()método alteram a forma como a pesquisa é executada. Aqui estão alguns deles:
+
+Pattern.CASE_INSENSITIVE- O caso de letras será ignorado ao realizar uma pesquisa.
+Pattern.LITERAL- Os caracteres especiais no padrão não terão nenhum significado especial e serão tratados como caracteres comuns ao realizar uma pesquisa.
+Pattern.UNICODE_CASE- Use junto com a CASE_INSENSITIVEbandeira para também ignorar maiúsculas e minúsculas de letras fora do alfabeto inglês
+
+Os colchetes são usados ​​para localizar um intervalo de caracteres:
+
+[abc]	Find one character from the options between the brackets
+[^abc]	Find one character NOT between the brackets
+[0-9]	Find one character from the range 0 to 9
+
+Metacaracteres
+
+|	any one of the patterns separated by | as in: cat|dog|fish
+.	one instance of any character
+^	beginning of a string as in: ^Hello
+$	end of the string as in: World$
+\d	a digit
+\s	a whitespace character
+\b	beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b
+\uxxxx	Unicode character specified by the hexadecimal number xxxx
+
+Quantificadores
+
+n+	contains at least one n
+n*	contains zero or more occurrences of n
+n?	contains zero or one occurrences of n
+n{x}	contains a sequence of X n's
+n{x,y}	contains a sequence of X to Y n's
+n{x,}	contains a sequence of at least X n's
+

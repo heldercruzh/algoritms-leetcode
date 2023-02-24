@@ -1,0 +1,47 @@
+BigDecimal
+--------------------------------------
+https://www.vivaolinux.com.br/dica/Manipulando-BigDecimal
+
+Arredondamento
+----------------------------
+
+x.setScale(int,int) 
+-> o primeiro parâmetro é a quantidade de casas decimais e 
+-> a segundo, o tipo de arrendamento
+
+numero.setScale(2,RoundingMode.DOWN) 
+-> Só será arrendodado para o número maior se a difernça for maior que 0.5
+-> 20.005 passa a ser 20.00
+
+numero.setScale(2,RoundingMode.UP) 
+-> Só será arrendodado para o número maior se a diferença for maior ou igual a 0.5
+-> 20.005 passa a ser 20.01
+
+numero.setScale(2,RoundingMode.HALF) 
+
+Operações de Comparação
+----------------------------
+
+x.compareTo(y)
+-> comparação, não é possível usar (>,<,==), como no caso dos números primitivos (int,double,float,long)
+-> Por padrão, o retorno desta função será:
+---> -1 - para x menor que y
+---> 0 - para x igual a y
+---> 1 - para x maior que y
+
+Operações matemáticas simples
+----------------------------
+
+x.substrac(y) equivale a x-y
+x.add(y) equivale a x+y
+x.div(y) equivale a x/y
+x.mult(y) equivale a x*y
+
+Atribuição de Valor
+-----------------------------
+String x = "8";
+BigDecimal a2 = new BigDecimal(a);
+BigDecimal b = new BigDecimal(2);
+BigDecimal c = b.add(a2);
+BigDecimal d = BigDecimal.valueOf(8L);
+BigDecimal e = BigDecimal.ONE;

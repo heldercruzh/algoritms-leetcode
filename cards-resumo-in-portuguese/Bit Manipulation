@@ -1,0 +1,57 @@
+Bit Manipulation
+https://www.educba.com/bit-manipulation-in-java/
+
+“| “. O operador bit a bit compara os bits correspondentes dos dois operandos. Se algum dos bits do operando for 1, a saída será 1; se não, será 0.
+
+//31
+int operand1 = 15;
+operand2 = 27; 
+output = operand1 | operand2;
+System.out.println(output);
+
+“&”. o operador bit a bit compara os bits correspondentes dos dois operandos. 
+Se ambos os bits do operando forem 1, a saída será 1; caso contrário, 0.
+
+//11
+int operand1 = 15, 
+operand2 = 27, 
+output = operand1 & operand2;
+System.out.println(output);
+
+“~”. Este operador inverte o bit do operando. Se o bit do operando for 0, então ele o converte em 1 e vice-versa.
+
+// -16
+int operand= 15, output;
+output= ~operand;
+System.out.println(output);
+
+“^”. este operador compara os bits correspondentes dos dois operandos se os bits correspondentes dos dois operandos forem diferentes que dá 1 como saída senão 0.
+
+//20
+int operand1= 15;
+operand2 = 27, output;
+output = operand1 ^ operand2;
+System.out.println(output);
+
+"<<" O operador de deslocamento à esquerda é denotado pelo símbolo “<<”. deslocamento de bits à esquerda desloca o padrão de bits para a esquerda por um determinado número de vezes especificado no operando.
+
+int operand = 123;
+System.out.println(operand << 1); //246
+System.out.println(operand << 2); //492
+System.out.println(operand << 3); //984
+
+
+">>" apenas acrescenta que zero bits são deslocados para a posição de ordem superior.
+
+int operand = 123;
+System.out.println(operand >> 1); //61
+System.out.println(operand >> 2); //30
+System.out.println(operand >> 3); //15
+
+
+">>>" desloca zero para a posição mais à esquerda por um determinado número de bits especificado no operando.
+
+int operand = 123;
+System.out.println(operand >>> 1); //61
+System.out.println(operand >>> 2); //30
+System.out.println(operand >>> 3); //15

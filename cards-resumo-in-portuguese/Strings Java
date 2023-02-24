@@ -1,0 +1,22 @@
+Principais métodos Strings Java
+
+https://www.devmedia.com.br/trabalhando-com-string-string-em-java/21737#:~:text=O%20tipo%20String%2C%20com%20S,um%20dos%20objetos%20mais%20utilizados.&text=String%20em%20Java-,Todos%20os%20tipos%20utilizados%20na%20linguagem%20Java%2C%20com%20exce%C3%A7%C3%A3o%20dos,um%20dos%20objetos%20mais%20utilizados.
+https://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html
+
+ devem ser declarados e instanciados.
+ 
+s.charAt(i) ---> indica o i-ésimo caractere da cadeia "s".
+
+s.concat(Strings)
+contains(Strings)
+equal(Strings)
+equalIgnoreCase(Strings) -- maiúsculos ou minúsculos
+indexOf(Strings) -- índice da primeira ocorrência do caractere especificado (-1 como retorno indica que não existe uma ocorrência.) 
+lastIndexOf(Strings)
+length()
+toLowerCase()
+toUpperCase()	
+trim()
+replace(charoldChar,charnewChar)
+substring(int ini,int fim)
+valueOf(doubled) -- Retorna a representação string do argumento double.

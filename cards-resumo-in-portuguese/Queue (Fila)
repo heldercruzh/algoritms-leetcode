@@ -1,0 +1,16 @@
+Queue (Fila)
+--------------------
+https://www.baeldung.com/java-queue
+https://www.geeksforgeeks.org/queue-data-structure/
+
+podemos adicionar novos elementos na parte de trás e removê-los na frente.
+
+Métodos básicos
+
+-> offer() – Insere um novo elemento na Queue (não permita a inserção de elementos nulos)
+-> poll()  – Remove um elemento da frente da  Queue
+-> peek() –  Inspeciona o elemento na frente da  Queue,  sem removê-lo
+
+AbstractQueue
+
+ PriorityQueue . Quando novos elementos são inseridos na  Fila de Prioridade , eles são ordenados com base em sua ordem natural ou por um Comparador definido  fornecido quando construímos a  Fila de Prioridade .

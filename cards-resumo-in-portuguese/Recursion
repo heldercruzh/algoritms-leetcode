@@ -1,0 +1,68 @@
+Recursion
+---------------------
+https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/
+
+O processo no qual uma função chama a si mesma direta ou indiretamente é chamado de recursão
+
+É essencial saber que devemos fornecer um determinado caso para encerrar esse processo de recursão.
+
+Propriedades da recursão:
+++++++++++++++++++++++++++
+-> Executar as mesmas operações várias vezes com entradas diferentes.
+-> Em cada etapa, tentamos entradas menores para tornar o problema menor.
+-> A condição básica é necessária para interromper a recursão, caso contrário, ocorrerá um loop infinito.
+
+Como as funções recursivas são armazenadas na memória?
++++++++++++++++++++++++++++
+
+A recursão usa mais memória, porque a função recursiva adiciona à pilha a cada chamada recursiva e mantém os valores lá até que a chamada seja concluída. A função recursiva usa a estrutura LIFO (LAST IN FIRST OUT) exatamente como a estrutura de dados da pilha.
+
+Qual é a condição básica na recursão?  
+++++++++++++++++++++++++++
+
+A ideia é representar um problema em termos de um ou mais problemas menores e adicionar uma ou mais condições básicas que interrompam a recursão.
+
+Por que o erro Stack Overflow ocorre na recursão?
+
+Se o caso base não for alcançado ou não for definido, pode surgir o problema de estouro de pilha.
+Se a memória for esgotada por essas funções na pilha, isso causará um erro de estouro de pilha. 
+
+Quando qualquer função é chamada de main(), a memória é alocada para ela na pilha. Uma função recursiva chama a si mesma, a memória para uma função chamada é alocada no topo da memória alocada para a função de chamada e uma cópia diferente das variáveis ​​locais é criada para cada chamada de função. Quando o caso base é atingido, a função retorna seu valor para a função por quem foi chamada e a memória é desalocada e o processo continua.
+
+// A Java program to demonstrate working of
+// recursion
+class GFG {
+	static void printFun(int test)
+	{
+		if (test < 1)
+			return;
+		else {
+			System.out.printf("%d ", test);
+			printFun(test - 1); // statement 2
+			System.out.printf("%d ", test);
+			return;
+		}
+	}
+
+	// Driver Code
+	public static void main(String[] args)
+	{
+		int test = 3;
+		printFun(test);
+	}
+}
+
+// This code is contributed by
+// Smitha Dinesh Semwal
+
+Quais são as desvantagens da programação recursiva sobre a programação iterativa?  
+
+-> todo programa recursivo pode ser escrito iterativamente e vice-versa também é verdadeiro.
+-> O programa recursivo requer mais espaço do que o programa iterativo, pois todas as funções permanecerão na pilha até que o caso base seja alcançado. 
+-> Ele também tem requisitos de tempo maiores devido às chamadas de função e sobrecarga de retornos.
+-> devido ao menor comprimento de código, os códigos são difíceis de entender e, portanto, cuidado extra deve ser praticado ao escrever o código. O computador pode ficar sem memória se as chamadas recursivas não forem verificadas corretamente.
+
+Quais são as vantagens da programação recursiva sobre a programação iterativa? 
+
+-> A recursão fornece uma maneira limpa e simples de escrever código.
+-> Alguns problemas são inerentemente recursivos, como travessias de árvores

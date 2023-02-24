@@ -1,0 +1,27 @@
+Binary Search (Busca binária)
+
+é um algoritmo de busca. Em cada etapa, o algoritmo compara o elemento de entrada x com o valor do elemento do meio na matriz. Se os valores corresponderem, retorne o índice do meio. Caso contrário, se x for menor que o elemento do meio, o algoritmo se repetirá para o lado esquerdo do elemento do meio, caso contrário, se repetirá para o lado direito do elemento do meio.
+
+//function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+public int search(int[] nums, int target) {
+		int left = 0;
+		int right = nums.length - 1;
+		
+		while(left <= right) {
+			
+			int mid = right + left / 2;
+			
+			if(nums[mid] == target) {
+				return mid;
+			}
+			
+			if(nums[mid] < target) {
+				left = mid + 1;
+			} else {
+				right = mid -1;
+			}
+			
+		}
+		
+		return -1;
+    }

@@ -1,0 +1,41 @@
+Sorting
+--------------------------------------------
+https://www.baeldung.com/java-sorting#point3
+
+
+Arrays.sort(toSort) -> Sorting With Array
+
+Sorting Part of an Array
+-> Arrays.sort(int[] a, int fromIndex, int toIndex)
+-> Arrays.sort(toSort, 3, 7);
+
+Java 8 Arrays.sort vs Arrays.parallelSort
+-> Arrays.parallelSort(toSort) ele divide o array em diferentes sub-arrays (conforme a granularidade no algoritmo de parallelSort ). Cada subarray é classificado com Arrays.sort() em diferentes threads para que a classificação possa ser executada de maneira paralela e finalmente mesclada como um array classificado.
+-> Arrays.parallelSort (int [] a, int fromIndex, int toIndex);
+
+*O resultado de Arrays.parallelSort será o mesmo de Array.sort , é claro, é apenas uma questão de alavancar multi-threading.
+
+Classificando uma lista 
+
+-> Collections.sort(toSortList);
+-> Collections.sort(Comparator.reverseOrder()); -> O  método Comparator.reverseOrder()  inverte a ordenação imposta pela ordenação natural.
+
+Classificação com Lambdas
+
+	Comparator<Integer> c  = new Comparator<>() {
+	    @Override
+	    public int compare(Integer a, Integer b) {
+		return Integer.compare(a, b);
+	    }
+	}
+
+	Com a implementação equivalente, usando a expressão Lambda:
+
+	Comparator<Integer> c = (a, b) -> Integer.compare(a, b);
+
+
+
+
+OBS exemplo: 
+-> Arrays.asList(new Integer[] {255, 200, 123, 89, 88, 66, 7, 5, 1}));
+-> Arrays.equals(sortedMap.keySet().toArray(), sortedKeys)

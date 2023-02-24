@@ -1,0 +1,19 @@
+Math Java
+-------------------------
+https://www.javaprogressivo.net/2012/09/classe-math-constantes-principais.html
+
+métodos retornam double.
++++++
+Math.exp(2) -> e^2 ('e' elevado ao quadrado)
+numero = Math.pow(a,b) -> a^b (a e b são do tipo double)
+Math.pow(2, 3)) -> 2 elevado ao cubo
+Math.sqrt(a) -> "A raiz quadrada de Pi é = "
+Math.log(10) -> O logaritmo natural de 10
+Math.sin() -> Calculando senos
+Math.cos() -> Calculando cossenos
+Math.tan() -> Calculando tangentes
+Math.abs(numero) -> calcular o módulo de um número
+Math.min(num1,num2) -> calcular o valor mínimo de dois números 'num1' e 'num2'
+Math.max(num1,num2) -> calcular o valor máximo de dois números 'num1' e 'num2
+Math.ceil(numero) -> arredondar um número 'numero' para cima
+Math.floor(numero) -> arredondar um número 'numero' para baixo,

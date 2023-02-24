@@ -1,0 +1,67 @@
+Two Pointers
+--------------------------
+https://www.geeksforgeeks.org/two-pointers-technique/
+
+usada para pesquisar pares em uma matriz classificada.
+
+Dado um array classificado A (classificado em ordem crescente), tendo N inteiros, descubra se existe algum par de elementos (A[i], A[j]) tal que sua soma seja igual a X.
+
+Pegamos dois ponteiros, um representando o primeiro elemento e outro representando o último elemento do array, e então somamos os valores mantidos em ambos os ponteiros. Se a soma for menor que X então deslocamos o ponteiro da esquerda para a direita ou se a soma for maior que X então deslocamos o ponteiro da direita para a esquerda, a fim de nos aproximarmos da soma. Continuamos movendo os ponteiros até obtermos a soma como X.
+
+// Java Program Illustrating Naive Approach to
+// Find if There is a Pair in A[0..N-1] with Given Sum
+// Using Two-pointers Technique
+  
+// Importing all utility classes
+import java.io.*;
+  
+// Main class
+class GFG 
+{
+     // Two pointer technique based solution to find
+    // if there is a pair in A[0..N-1] with a given sum.
+    public static int isPairSum(int A[], int N, int X)
+    {
+        // represents first pointer
+        int i = 0;
+  
+        // represents second pointer
+        int j = N - 1;
+  
+        while (i < j) {
+  
+            // If we find a pair
+            if (A[i] + A[j] == X)
+                return 1;
+  
+            // If sum of elements at current
+            // pointers is less, we move towards
+            // higher values by doing i++
+            else if (A[i] + A[j] < X)
+                i++;
+  
+            // If sum of elements at current
+            // pointers is more, we move towards
+            // lower values by doing j--
+            else
+                j--;
+        }
+        return 0;
+    }
+    
+    // Driver code
+    public static void main(String[] args)
+    {
+        // array declaration
+        int arr[] = { 2, 3, 5, 8, 9, 10, 11 };
+          
+        // value to search
+        int val = 17;
+        
+        // size of the array
+        int arrSize = arr.length;
+        
+        // Function call
+        System.out.println(isPairSum(arr, arrSize, val));
+    }
+}

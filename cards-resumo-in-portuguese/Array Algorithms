@@ -1,0 +1,78 @@
+Array Algorithms
+https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-4-array-algorithms.html
+
+Kinds
+-- Determine the minimum or maximum value in an array
+-- Compute a sum, average, or mode of array elements
+-- Search for a particular element in the array
+-- Determine if at least one element has a particular property
+-- Determine if all elements have a particular property
+-- Access all consecutive pairs of elements
+-- Determine the presence or absence of duplicate elements
+-- Determine the number of elements meeting specific criteria
+-- Shift or rotate elements left or right
+-- Reverse the order of the elements
+
+----------------------------
+Here are two common array traversal loops that can be used for these algorithms:
+
+for (int value : array)
+{
+    if (value ....)
+        ...
+}
+
+for(int i=0; i < array.length; i++)
+{
+   if (array[i] ....)
+       ...
+}
+
+Exemplos:
+
+The code below finds the minimum (smallest element) in an array.
+----------------------------------------------------------------
+public class MinMax
+{
+   public static void main(String[] args)
+   {
+     int[ ] values = {6, 2, 1, 7, 12, 5};
+     int min = values[0]; // initialize min to the first element
+     for (int val : values)
+     {
+       if (val < min) // found a new min!
+           min = val;
+     }
+     System.out.println("Min is " + min );
+   }
+}
+
+rotates array elements to the left
+
+public class Rotate
+{
+   public static void main(String[] args)
+   {
+     int[ ] values = {6, 2, 1, 7, 12, 5};
+     int first = values[0];
+     for (int i = 0; i < values.length; i++)
+     {
+        // if it's not the last element, copy the next one over
+       if (i < values.length - 1)
+       {
+           values[i] = values[i+1];
+       }
+       else {
+          // last element gets first
+          values[i] = first;
+         }
+     }
+     // print them out to see the results
+     for (int val : values)
+     {
+        System.out.print(val + " ");
+     }
+ }
+}
+
+

@@ -1,0 +1,70 @@
+Expressão Regular|Regex
+--------------------------
+https://blog.dp6.com.br/regex-o-guia-essencial-das-express%C3%B5es-regulares-2fc1df38a481
+
+Caracteres de agrupamento 
+-------------------------
+| (pipe)-> 
+data = company | data = science -> “data company” ou “data science”
+data = (company|science|engineers|analysts) -> “data [alguma coisa]”?
+data = (.|) -> “data [alguma coisa]”?
+
+Caracteres especificadores: . [ ^ — ] \
+
+colchetes [] 
+(a|e|i|o|u) OU [aeiou] -> expressão para pegar todas as vogais
+[a-z] -> todas as letras do alfabeto?
+[0-9] -> numeros de 0 a 9 
+[a-z0-9] -> se eu combinar os dois, a expressão continua funcionando, como se fosse um “OU”
+barra invertida \
+
+negação ^ 
+
+[^a-z] -> retornar somente sequencias e numeros
+[^0-9] -> retornar somente sequencias e letra
+
+Temos alguns padrões de busca prontos para tipos diferentes. 
+
+ \d -> Para pegar qualquer número
+\w -> Para pegar qualquer letra
+\D -> Para pegar tudo menos números
+\W -> Tudo menos letras
+
+- [0–9] = \d
+- [^0-9] = \D
+- [a-zA-Z0–9_] = \w
+- [^a-zA-Z0–9_] = \W
+
+pegar qualquer espaço, incluindo tabs e quebras de linha -> \s
+
+Caracteres quantificadores: + * { } -> (dizer quantas vezes as coisas precisam aparecer)
+----------------------------------
+
+chaves {}. Elas tem a seguinte sintaxe: [caractere]{n,m} onde n é o número mínimo, e e m é o número máximo de repetições do [caractere].
+
+(|w||w|w||w\w\w)    OU |w{1,3} -> pegando palavras de uma, duas ou três letras  
+\w{4} -> palavras com exatamente 4 letras 
+\w{4,} -> palavras de 4 ou mais letras 
+
+- {0,1} = ? (opcional)
+- {0,} = * (0 ou mais)
+- {1,} = + (1 ou mais)
+
+pegar todas as palavras do meu texto, independentemente do tamanho, basta pegar tudo que tem 1 ou mais caracteres
+
+\w* > Se eu quiser encontrar inclusive os espaços vazios 
+^(dp6\.com\.br)(.*)$ -> pegar todas as páginas do site da dp6 para analisar (tudo que contém dp6.com.br, independente se a url continua ou não depois do br.)  
+data\w+ -> pegar todas as combinações de “data [alguma coisa]” lá no texto inicial 
+
+Âncoras: ^ $ \b
+---------------
+^ -> significa o começo da linha
+$ -> significa no fim da linha
+\b -> significa “extremidade da palavra”
+. -> qualquer coisa
+exemplo:
+- site dp6.com.br no final da linha (dp6\.com\.br)$
+- palavras de 4 letras, posso trocar os espaços na expressão pelo \b -> \b\w{4}\b
+
+barra invertida \ antes de outro metacaractere, que serve para “escapar” o caractere seguinte e garantir que ele vai ser procurado como texto, e não com o significado dele nas regex. 
+

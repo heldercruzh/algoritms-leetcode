@@ -1,0 +1,142 @@
+Dynamic Programming
+-------------------
+https://www.programiz.com/dsa/dynamic-programming
+
+Se algum problema puder ser dividido em subproblemas, que por sua vez são divididos em subproblemas menores, e se houver sobreposição entre esses subproblemas, as soluções para esses subproblemas podem ser salvas para referência futura.
+
+Ex: Fibonacci
+
+A programação dinâmica funciona armazenando o resultado dos subproblemas para que, quando suas soluções forem necessárias, elas estejam disponíveis e não precisemos recalculá-las.
+
+Essa técnica de armazenar o valor dos subproblemas é chamada de memoização. Ao salvar os valores na matriz, economizamos tempo para cálculos de subproblemas que já encontramos.
+
+var m = map(0 → 0, 1 → 1)
+function fib(n)
+    if key n is not in map m 
+        m[n] = fib(n − 1) + fib(n − 2)
+    return m[n]
+    
+a maioria dos problemas de otimização requer recursão e a programação dinâmica é usada para otimização.
+
+Greedy Algorithms vs Dynamic Programming
+----------------------------
+algoritmos gulosos buscam soluções localmente ótimas, ou seja, uma escolha gulosa, na esperança de encontrar um ótimo global. Portanto, algoritmos gananciosos podem fazer uma suposição que parece ótima no momento, mas se torna dispendiosa no futuro e não garante um ótimo global.
+
+Subsequência comum mais longa
+----------------------------
+https://www.programiz.com/dsa/longest-common-subsequence
+
+A subsequência comum mais longa (LCS) é definida como a subsequência mais longa que é comum a todas as sequências dadas, desde que os elementos da subsequência não precisem ocupar posições consecutivas dentro das sequências originais.
+
+// The longest common subsequence in Java
+
+class LCS_ALGO {
+  static void lcs(String S1, String S2, int m, int n) {
+    int[][] LCS_table = new int[m + 1][n + 1];
+
+    // Building the mtrix in bottom-up way
+    for (int i = 0; i <= m; i++) {
+      for (int j = 0; j <= n; j++) {
+        if (i == 0 || j == 0)
+          LCS_table[i][j] = 0;
+        else if (S1.charAt(i - 1) == S2.charAt(j - 1))
+          LCS_table[i][j] = LCS_table[i - 1][j - 1] + 1;
+        else
+          LCS_table[i][j] = Math.max(LCS_table[i - 1][j], LCS_table[i][j - 1]);
+      }
+    }
+
+    int index = LCS_table[m][n];
+    int temp = index;
+
+    char[] lcs = new char[index + 1];
+    lcs[index] = '\0';
+
+    int i = m, j = n;
+    while (i > 0 && j > 0) {
+      if (S1.charAt(i - 1) == S2.charAt(j - 1)) {
+        lcs[index - 1] = S1.charAt(i - 1);
+
+        i--;
+        j--;
+        index--;
+      }
+
+      else if (LCS_table[i - 1][j] > LCS_table[i][j - 1])
+        i--;
+      else
+        j--;
+    }
+
+    // Printing the sub sequences
+    System.out.print("S1 : " + S1 + "\nS2 : " + S2 + "\nLCS: ");
+    for (int k = 0; k <= temp; k++)
+      System.out.print(lcs[k]);
+    System.out.println("");
+  }
+
+  public static void main(String[] args) {
+    String S1 = "ACADB";
+    String S2 = "CBDA";
+    int m = S1.length();
+    int n = S2.length();
+    lcs(S1, S2, m, n);
+  }
+}
+
+Algoritmo Floyd-Warshall
+-------------------------
+https://www.programiz.com/dsa/floyd-warshall-algorithm
+
+Algoritmo Floyd-Warshall é um algoritmo para encontrar o caminho mais curto entre todos os pares de vértices em um grafo ponderado. 
+
+Este algoritmo funciona tanto para grafos ponderados direcionados quanto não direcionados. Porém, não funciona para os grafos com ciclos negativos (onde a soma das arestas em um ciclo é negativa).
+
+Um grafo ponderado é um grafo no qual cada aresta tem um valor numérico associado a ela.
+
+O algoritmo Floyd-Warhshall também é chamado de algoritmo de Floyd, algoritmo de Roy-Floyd, algoritmo de Roy-Warshall ou algoritmo WFI.
+
+// Floyd Warshall Algorithm in Java
+
+class FloydWarshall {
+  final static int INF = 9999, nV = 4;
+
+  // Implementing floyd warshall algorithm
+  void floydWarshall(int graph[][]) {
+    int matrix[][] = new int[nV][nV];
+    int i, j, k;
+
+    for (i = 0; i < nV; i++)
+      for (j = 0; j < nV; j++)
+        matrix[i][j] = graph[i][j];
+
+    // Adding vertices individually
+    for (k = 0; k < nV; k++) {
+      for (i = 0; i < nV; i++) {
+        for (j = 0; j < nV; j++) {
+          if (matrix[i][k] + matrix[k][j] < matrix[i][j])
+            matrix[i][j] = matrix[i][k] + matrix[k][j];
+        }
+      }
+    }
+    printMatrix(matrix);
+  }
+
+  void printMatrix(int matrix[][]) {
+    for (int i = 0; i < nV; ++i) {
+      for (int j = 0; j < nV; ++j) {
+        if (matrix[i][j] == INF)
+          System.out.print("INF ");
+        else
+          System.out.print(matrix[i][j] + "  ");
+      }
+      System.out.println();
+    }
+  }
+
+  public static void main(String[] args) {
+    int graph[][] = { { 0, 3, INF, 5 }, { 2, 0, INF, 4 }, { INF, 1, 0, INF }, { INF, INF, 2, 0 } };
+    FloydWarshall a = new FloydWarshall();
+    a.floydWarshall(graph);
+  }
+}

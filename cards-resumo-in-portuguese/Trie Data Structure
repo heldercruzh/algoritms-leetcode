@@ -1,0 +1,13 @@
+Trie Data Structure
+--------------------------
+https://www.baeldung.com/trie-java
+
+cada nó em árvores de busca binária sempre tem dois filhos, enquanto os nós de tentativas, por outro lado, podem ter mais.
+
+Uma trie (também conhecida como árvore digital) e às vezes até árvore radix ou árvore de prefixo (já que podem ser pesquisadas por prefixos), é uma estrutura de árvore ordenada, que aproveita as chaves que armazena – geralmente strings.
+
+A posição de um nó na árvore define a chave à qual esse nó está associado, o que torna as tentativas diferentes em relação às árvores binárias de busca, nas quais um nó armazena uma chave que corresponde apenas a esse nó.
+
+cada nó em árvores de busca binária sempre tem dois filhos, enquanto os nós de tentativas, por outro lado, podem ter mais.
+
+Em um trie, cada nó (exceto o nó raiz) armazena um caractere ou um dígito. Ao percorrer a trie do nó raiz para um nó específico n , um prefixo comum de caracteres ou dígitos pode ser formado, o qual também é compartilhado por outras ramificações da trie.
