@@ -142,8 +142,8 @@ Binary Search 214 / Binary Indexed Tree 26 / Binary Tree 167 / Depth-First Searc
 
 	387. First Unique Character in a String
 
-Proxímos conteúdos
----------------------------------------
+<h2 align="center"> The next content </h2>
+
 # Greedy
 # Database
 # Hash Function
