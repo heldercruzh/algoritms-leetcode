@@ -56,24 +56,11 @@ OK-Binary Tree
 (https://www.baeldung.com/java-binary-tree)
 (https://github.com/eugenp/tutorials/blob/master/data-structures/src/main/java/com/baeldung/tree/BinaryTree.java)
 (https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/)
---- Binary Search 214
-
+Binary Search 214 / Binary Indexed Tree 26 / Binary Tree 167 / Depth-First Search 266 / Breadth-First Search 210 / Binary Search Tree 40 / Tree 207
 	OK - 108. Convert Sorted Array to Binary Search Tree
-	
---- Binary Indexed Tree 26
---- Binary Tree 167
-	
 	OK - 94. Binary Tree Inorder Traversal
-
---- Depth-First Search 266 e Breadth-First Search 210
-		
 	OK - 101. Symmetric Tree
-	
---- Binary Search Tree 40
---- Tree 207
-
 	OK - 108. Convert Sorted Array to Binary Search Tree
-
 OK-Math 410
 (https://www.javaprogressivo.net/2012/09/classe-math-constantes-principais.html)	
 	OK - 13. Roman to Integer
@@ -88,13 +75,11 @@ OK-Bit Manipulation 154
 	190. Reverse Bits
 	191. Number of 1 Bits
 	268. Missing Number
-
 OK-Sorting 292
 (https://www.baeldung.com/java-sorting)
 	OK - 88. Merge Sorted Array
 	242. Valid Anagram	
 	350. Intersection of Two Arrays II
-
 OK - Divide and Conquer 43
 (https://www.programiz.com/dsa/divide-and-conquer)
 	191. Number of 1 Bits
@@ -120,17 +105,13 @@ OK - Recursion 45
 (https://www.w3schools.com/java/java_recursion.asp)
 (https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/)
 	326. Power of Three
-
-OK - Heap (Priority Queue) 134 e Design 120 e Graph 120 e Prefix Sum 114 e Backtracking 94 e Sliding Window 84 e Union Find 72 e Ordered Set 51 e Monotonic Stack 49 e Enumeration 46 e Bitmask 38 e Geometry 31 e Segment Tree 31 e Topological Sort 30 e Number Theory 28 e Game Theory 24 e Combinatorics 19 e Data Stream 18 e Interactive 18 e String Matching 18 e Rolling Hash 18 e Shortest Path 17 e Randomized 12 e Brainteaser 12 e Monotonic Queue 11 e Merge Sort 11 e Iterator 9 e Concurrency 9 e Doubly-Linked List 8 e Doubly-Linked List 8 e Quickselect 7 e Bucket Sort 6 e Suffix Array 6 e Minimum Spanning Tree 5 e Counting Sort 5 e Shell 4 e Line Sweep 4 e Reservoir Sampling 4 e Eulerian Circuit 3 e Radix Sort 3 e Strongly Connected Component 2 e Rejection Sampling 2 Biconnected Component 1
-	
-	104. Maximum Depth of Binary Tree
-	
+OK - Heap (Priority Queue) 134 e Design 120 e Graph 120 e Prefix Sum 114 e Backtracking 94 e Sliding Window 84 e Union Find 72 e Ordered Set 51 e Monotonic Stack 49 e Enumeration 46 e Bitmask 38 e Geometry 31 e Segment Tree 31 e Topological Sort 30 e Number Theory 28 e Game Theory 24 e Combinatorics 19 e Data Stream 18 e Interactive 18 e String Matching 18 e Rolling Hash 18 e Shortest Path 17 e Randomized 12 e Brainteaser 12 e Monotonic Queue 11 e Merge Sort 11 e Iterator 9 e Concurrency 9 e Doubly-Linked List 8 e Doubly-Linked List 8 e Quickselect 7 e Bucket Sort 6 e Suffix Array 6 e Minimum Spanning Tree 5 e Counting Sort 5 e Shell 4 e Line Sweep 4 e Reservoir Sampling 4 e Eulerian Circuit 3 e Radix Sort 3 e Strongly Connected Component 2 e Rejection Sampling 2 Biconnected Component 1	
+	104. Maximum Depth of Binary Tree	
 OK - Queue 39
 (https://www.baeldung.com/java-queue)
 (https://www.geeksforgeeks.org/queue-data-structure/)
 (https://www.baeldung.com/java-priorityqueue)
 	387. First Unique Character in a String
-
 
 Proxímos conteúdos
 +++++++++++++++++++++++++++++++++++++++++
@@ -138,18 +119,12 @@ Greedy 285
 Database 220
 Hash Function 25
 Simulation 113
-
-	412. Fizz Buzz
-	
+	412. Fizz Buzz	
 Counting 98
-
 	387. First Unique Character in a String
 	169. Majority Element
-
 Memoization 32
-
-	70. Climbing Stairs
-	
+	70. Climbing Stairs	
 OK-Dynamic Programming 415/4
 (https://www.programiz.com/dsa/dynamic-programming)
 	118. Pascal's Triangle
