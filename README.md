@@ -14,7 +14,7 @@ Below is a my precious list of the most demanded algorithms in international int
 	Data Struture to study
 		- number and name of the algoritms
 
-	"OK" is the algoritms that are done. 
+	"OK" the algoritms is done. 
 
 Until now I've been dedicated a good time to improve my hard skill studing the data structures and find the best solution for each problem fast and clearly. Learn how I'll be able find different ways to find a solutions with the Software Engenieer community
 
