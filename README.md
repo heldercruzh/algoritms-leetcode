@@ -28,10 +28,10 @@ I hope these codes help you as it helped me and you appreciate.
 - CODEGEN: https://codegen.eu/
 
 # Selection by leetcode
-Filtros
---- TOP Interview Questions
---- Easy
---- Tags
+	Filtros
+	- TOP Interview Questions
+	- Easy
+	- Tags
 
 # Array
 (https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-4-array-algorithms.html)
