@@ -9,7 +9,7 @@
 
 Below is a my precious list of the most demanded algorithms in international interviews for the Senior Software Engineer position on the leetscode website (https://leetcode.com/). Made based on my experiences in interviews with this leetcode platform and the filters made in it with data structure content to be studied to develop them.
 
-# Organization in this structure: 
+# Organization structure: 
 
 	Data Struture to study
 		- number and name of the algoritms
