@@ -1,0 +1,85 @@
+Big-O notation (Uma maneira de aumentar sua performace na escrita de algoritmos)
+-----------------------------
+https://medium.com/linkapi-solutions/o-que-%C3%A9-big-o-notation-32f171e4a045
+
+Determina a performance do seu algoritmo se o número de valores de entrada aumentar? Constante? Linear? Exponencial?
+(quanto tempo ele levará para ser completado baseado nos seus valores de entrada)
+
+1) Constantes (ex: um valor - notação O(1))
+
+Funções que independente da quantidade de valores de entrada passados, a performance do tempo de resposta dela se manterá a mesma.
+(notação O(1) considerando o "Time" e "Input Size") 
+
+Exemplo:
+
+function log(array) {
+   console.log(array[0]);
+}
+
+2) Linear (ex: loop - notação O(n))
+
+Algoritmos lineares ou funções lineares, são caracterizados por realizar uma interação com cada valor passado na entrada. 
+(quantidade de operações realizadas será correspondente ao número de valores informados)
+(notação O(n), sendo “n” o número de valores passados na entrada.)
+
+Exemplo:
+
+function log(array) {
+   for(var i = 0; i < array.length; i++) {
+   	console.log(array[i]);   
+   }
+}
+
+3) Exponencial (ex: loop dentro de outro loop - notação O(n²))
+
+além de interagirmos com cada elemento de entrada, nós iremos realizar uma sub interação. 
+Então, para cada elemento que acrescentamos no array, o número de interações e o tempo de execução aumentará de maneira exponencial.
+O que torna algoritmos dessa família ineficientes e com baixa performance caso estejamos lidando com um grande número de entrada de dados.
+(notação O(n²), sendo “n” o número de valores passados na entrada.)
+
+for(var i = 0; i < array.length; i++) {
+   for(var j = 0; j < array.length; j++) {
+	console.log(array[i] + array[j]);
+   }	
+}
+
+4) Logaritmicos (ex: busca binária - notação O(log n))
+
+Esta família é considerada muita performática por nos oferecer uma opção de interação muito eficiente em casos com um grande número de valores de entrada.
+Essa função sempre receberá dois valores como parâmetros, sendo o primeiro um array de elementos (que já deve estar ordenado, por estarmos lidando com uma busca binária) e o segundo o valor que queremos achar dentro desse array.
+A busca binária possui um tempo de complexidade logarítmico, pois em cada operação nós cortamos os valores de entrada que não satisfazem as condições de busca pela metade. Isto é bom pois nós vamos apenas verificar uma fração de valores do nosso input para achar o valor que estamos procurando.
+Logo se tivermos uma entrada com 4000 elementos, precisaremos realizar apenas 12 operações para encontrar o valor que estamos procurando.
+
+function binarySearch(array, key) {
+   var low = 0;
+   var hight = array.lenght -1;
+   var mid;
+   var element;
+   
+   while(low <= hight) {
+   
+   	mid = Math.floor((low + hight) / 2, 10);
+   
+   	element = array[mid];
+   	
+   	if(element < key) {
+   	    low = mid + 1;
+   	}
+   	else if (element > key) {
+   	    hight = mid - 1;
+   	}
+   	else {
+   	    return mid;
+   	}
+   	
+   }	
+   
+   return -1;
+
+}
+
+
+
+
+
+
